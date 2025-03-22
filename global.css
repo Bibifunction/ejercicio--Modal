@@ -1,0 +1,107 @@
+:root {
+    /* ----->Colores primarios */
+    --color-primary: hsl(209, 83%, 51%);
+    --color-primary-active: hsl(209, 83%, 45%);
+    --color-primary-text: hsl(0, 0%, 100%);
+  
+    /* ------>Colores secundarios */
+    --color-secondary: hsl(209, 83%, 51%);
+  
+    /* ------>Colores de texto */
+    --color-text-primary: hsl(215, 69%, 12%);
+    --color-text-secondary: hsl(257, 65%, 51%);
+  
+    /* ------>Colores neutros */
+    --color-white: hsl(0, 0%, 100%);
+    --color-backdrop: hsl(0, 0%, 20%);
+  
+    /* ------>Estados */
+    --color-hover: hsl(0, 0%, 70%);
+  
+    /* ------> TIPOGRAFÍA */
+    --font-family-poppins: "Poppins", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-size-18: 18px;
+    --line-height-145: 1.45;
+    --line-height-120: 1.2;
+  
+    /* ------> ESPACIADO */
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-20: 20px;
+    --space-32: 32px;
+    --space-52: 52px;
+  
+    /* ------> BORDES */
+    --border-radius-10: 10px;
+    --border-radius-20: 20px;
+    --border-width-2: 2px;
+  
+    /* ------> BOTONES */
+    --btn-padding-x: 52px;
+    --btn-padding-y: 12px;
+    --btn-min-width: 163px;
+    --btn-transition: background-color 0.2s ease-in;
+  }
+  
+  body {
+    font-family: var(--font-family-poppins);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    line-height: var(--line-height-145);
+    cursor: pointer;
+    transition: var(--btn-transition);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--border-radius-10);
+    font-size: var(--font-size-18);
+    border: var(--border-width-2) solid transparent;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+    font-family: var(--font-family-poppins);
+    box-sizing: border-box;
+    margin-bottom: var(--space-20);
+  }
+  
+  .btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-text);
+  
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+  
+  .btn--secondary {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    border-color: currentColor;
+  
+    &:hover {
+      color: var(--color-hover);
+      border-color: var(--color-hover);
+    }
+  }
+  
+  a.btn {
+    text-decoration: underline;
+  
+    &.btn--primary {
+      background-color: var(--color-primary-active);
+      color: var(--color-primary-text);
+    }
+  
+    &.btn--secondary {
+      background-color: transparent;
+      color: var(--color-primary-active);
+      border-color: var(--color-primary-active);
+    }
+  }
